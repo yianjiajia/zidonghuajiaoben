@@ -1,4 +1,5 @@
-uthor::yanjiajia
+#!/bin/bash
+author::yanjiajia
 USAGE="usage:./`basename $0` start | stop | status | start_agent | stop_agent | start_webgui | stop_webgui"
 IP=`ifconfig | awk -F'addr:|Bcast' '/Bcast/{print $2}' 2&> /dev/null`
 wlisten_PID=`ps aux |grep "wlisten" |grep -v "grep" |awk '{ print $2 }'`
